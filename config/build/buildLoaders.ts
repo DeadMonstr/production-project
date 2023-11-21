@@ -6,6 +6,24 @@ import {BuildOptions} from "./types/config";
 
 export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
 
+
+    const svgLoader = {
+
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+
+    };
+
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],
+    };
+
+
     const typescriptLoader = {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -21,8 +39,8 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
                 loader: "css-loader",
                 options: {
                     modules: {
-                        auto: (resPath:string) => Boolean(resPath.includes(".module.")),
-                        localIdentName: isDev ? `[path][name]__[local]--[hash:base64:5]`: `[hash:base64:8]`
+                        auto: (resPath: string) => Boolean(resPath.includes(".module.")),
+                        localIdentName: isDev ? `[path][name]__[local]--[hash:base64:5]` : `[hash:base64:8]`
                     },
 
                 },
@@ -33,8 +51,31 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
         ],
     }
 
+    const babelLoader =  {
+        test: /\.(js|jsx|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader",
+            options: {
+                presets: ['@babel/preset-env'],
+                plugins:[
+                    [
+                        "i18next-extract",
+                        {
+                            "locales": ["uz","en"],
+                            keyAsDefaultValue: true
+                        }
+                    ]
+                ]
+            }
+        }
+    }
+
     return [
         scssLoader,
-        typescriptLoader
+        babelLoader,
+        typescriptLoader,
+        svgLoader,
+        fileLoader
     ]
 }
