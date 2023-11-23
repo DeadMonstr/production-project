@@ -5,18 +5,18 @@
 
 
 .app {
-  font-size: var(--font-m);
-  background: var(--bg-color);
-  color: var(--primary-color);
-  min-height: 100vh;
+    font-size: var(--font-m);
+    background: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
 }
 
 .content-page {
-  width: 100%;
-  display: flex;
+    width: 100%;
+    display: flex;
 }
 
 .page-wrapper {
-  flex-grow: 1;
-  padding: 20px;
+    flex-grow: 1;
+    padding: 20px;
 }

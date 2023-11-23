@@ -13,10 +13,12 @@ function App () {
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback={''}>
+            <Suspense fallback={'loading'}>
                 <Navbar/>
+
                 <div className="content-page">
                     <Sidebar/>
+
                     <AppRouter/>
                 </div>
 
