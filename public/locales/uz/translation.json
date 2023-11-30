@@ -3,5 +3,8 @@
   "translate": "Tilni o'girmoq",
   "aboutPage": "Biz haqimizda",
   "mainPage": "Assosiy sahifa",
-  "lang": "Uzbekcha"
+  "lang": "Uzbekcha",
+  "Page not found": "Sahifa topilmadi",
+  "error": "Hatolik yuz berdi",
+  "reload page": "Sahifani yangilash"
 }

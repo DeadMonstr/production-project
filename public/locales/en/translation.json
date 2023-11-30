@@ -3,5 +3,8 @@
   "translate": "Translate",
   "aboutPage": "About Page",
   "mainPage": "Main Page",
-  "lang": "English"
+  "lang": "English",
+  "Page not found": "Page not found",
+  "error": "error",
+  "reload page": "reload page"
 }

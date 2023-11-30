@@ -1,6 +1,9 @@
 {
+  "Page not found": "Page not found",
   "aboutPage": "aboutPage",
+  "error": "error",
   "lang": "lang",
   "lang111": "lang111",
-  "mainPage": "mainPage"
+  "mainPage": "mainPage",
+  "reload page": "reload page"
 }
