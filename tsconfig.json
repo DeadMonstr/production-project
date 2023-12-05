@@ -23,6 +23,6 @@
     }
   },
 //  "include": [
-//    ".eslintrc.cjs"
+//    "./config/jest/setupTests.ts"
 //  ]
 }
