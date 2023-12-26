@@ -1,7 +1,7 @@
 // const path = require("path");
 // const HTMLWebpackPlugin = require("html-webpack-plugin");
 // const webpack = require("webpack")
-import path from 'path'
+import * as path from 'path'
 import type webpack from 'webpack'
 
 import { buildWebpackConfig } from './config/build/buildWebpackConfig'

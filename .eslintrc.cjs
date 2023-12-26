@@ -4,19 +4,19 @@ module.exports = {
         "es2021": true,
         "jest": true
     },
-    "extends": [
-        "standard-with-typescript",
-        "plugin:react/recommended",
-        "plugin:i18next/recommended"
-    ],
+    "extends": ['standard-with-typescript', 'plugin:react/recommended', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
     "overrides": [
         {
             "env": {
                 "node": true
             },
             "files": [
-                ".eslintrc.{js,cjs}"
+                ".eslintrc.{js,cjs}",
+                "**/src/**/*.test.{ts,tsx}"
             ],
+            rules: {
+                "i18next/no-literal-string": "off"
+            },
             "parserOptions": {
                 "sourceType": "script"
             }
@@ -25,7 +25,8 @@ module.exports = {
     "parserOptions": {
         project: ['./tsconfig.json'],
         ecmaVersion: "latest",
-        sourceType: "module"
+        sourceType: "module",
+        tsconfigRootDir: __dirname
     },
     "plugins": [
         "react",
