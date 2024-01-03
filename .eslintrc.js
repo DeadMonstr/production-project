@@ -4,7 +4,8 @@ module.exports = {
         "es2021": true,
         "jest": true
     },
-    "extends": ['standard-with-typescript', 'plugin:react/recommended', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
+    "extends":
+        [ 'plugin:react/recommended', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
     "overrides": [
         {
             "env": {
@@ -23,15 +24,19 @@ module.exports = {
         }
     ],
     "parserOptions": {
-        project: ['./tsconfig.json'],
+        ecmaFeatures: {
+            jsx: true,
+        },
         ecmaVersion: "latest",
         sourceType: "module",
-        tsconfigRootDir: __dirname
     },
     "plugins": [
+        "@typescript-eslint",
         "react",
         "i18next"
     ],
+
+    parser: '@typescript-eslint/parser',
     "rules": {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
