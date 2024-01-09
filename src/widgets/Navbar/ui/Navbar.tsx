@@ -17,7 +17,6 @@ export const Navbar = ({ className }: NavbarProps) => {
     const onToggleModal = useCallback( () => {
         setIsAuthModal(prev => !prev)
     },[])
-    
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
             <Button
