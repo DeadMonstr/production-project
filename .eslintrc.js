@@ -13,10 +13,11 @@ module.exports = {
             },
             "files": [
                 ".eslintrc.{js,cjs}",
-                "**/src/**/*.test.{ts,tsx}"
+                "**/src/**/*.{test,stories}.{ts,tsx}"
             ],
             rules: {
-                "i18next/no-literal-string": "off"
+                "i18next/no-literal-string": "off",
+                "max-len": "off"
             },
             "parserOptions": {
                 "sourceType": "script"
@@ -33,7 +34,8 @@ module.exports = {
     "plugins": [
         "@typescript-eslint",
         "react",
-        "i18next"
+        "i18next",
+        "react-hooks"
     ],
 
     parser: '@typescript-eslint/parser',
@@ -59,6 +61,8 @@ module.exports = {
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/naming-convention": "off",
         "i18next/no-literal-string": ["error",{markupOnly:true}],
-        "max-len": ["error",{"ignoreComments": true,code: 100}]
+        "max-len": ["error",{"ignoreComments": true,code: 100}],
+        "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+        "react-hooks/exhaustive-deps": "error" // Checks effect dependencies
     }
 }
