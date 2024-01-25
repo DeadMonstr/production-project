@@ -1,6 +1,5 @@
 import React, {Suspense} from 'react'
 
-import { useTheme } from 'app/providers/ThemeProvider'
 import { classNames } from 'shared/lib/classNames/classNames'
 
 import { AppRouter } from 'app/providers/routers'
@@ -8,11 +7,9 @@ import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
 
 function App () {
-    const { theme } = useTheme()
-
 
     return (
-        <div className={classNames('app', {}, [theme])}>
+        <div className={classNames('app', {}, [])}>
             <Suspense fallback={'loading'}>
                 <Navbar/>
 
