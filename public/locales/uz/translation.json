@@ -8,5 +8,7 @@
   "Page not found": "Sahifa topilmadi",
   "error": "Hatolik yuz berdi",
   "reload page": "Sahifani yangilash",
-  "toggle": "almashtirish"
+  "toggle": "almashtirish",
+  "passwordEnter": "Parol kiting",
+  "usernameEnter": "Username kiriting"
 }

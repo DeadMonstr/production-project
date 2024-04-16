@@ -1,8 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type {Meta, StoryObj} from '@storybook/react'
 
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Theme } from 'app/providers/ThemeProvider/lib/ThemeContext'
-import { Navbar } from './Navbar'
+import {ThemeDecorator} from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import {Theme} from 'app/providers/ThemeProvider/lib/ThemeContext'
+import {Navbar} from './Navbar'
+import {StoreDecorator} from "shared/config/storybook/StoreDecorator/StoreDecorator";
 
 const meta = {
     title: 'widget/Navbar',
@@ -20,8 +21,26 @@ export const Light: Story = {
     args: {}
 }
 
+Light.decorators = [
+    StoreDecorator({})
+]
+
+
 export const Dark: Story = {
     args: {}
 }
 
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [
+    StoreDecorator({}), ThemeDecorator(Theme.DARK)
+]
+export const AuthNavbar: Story = {
+    args: {}
+}
+
+AuthNavbar.decorators = [
+    StoreDecorator({
+        user: {
+            authData: {username: "abs"}
+        }
+    }), ThemeDecorator(Theme.DARK)
+]

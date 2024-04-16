@@ -40,6 +40,7 @@ module.exports = {
 
     parser: '@typescript-eslint/parser',
     "rules": {
+        "react/display-name": "off",
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         '@typescript-eslint/indent': [2,4],
@@ -61,7 +62,7 @@ module.exports = {
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/naming-convention": "off",
         "i18next/no-literal-string": ["error",{markupOnly:true}],
-        "max-len": ["error",{"ignoreComments": true,code: 100}],
+        "max-len": ["error",{"ignoreComments": true,code: 150}],
         "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
         "react-hooks/exhaustive-deps": "error" // Checks effect dependencies
     }

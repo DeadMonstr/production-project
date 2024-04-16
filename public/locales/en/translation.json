@@ -8,5 +8,7 @@
   "Page not found": "Page not found",
   "error": "error",
   "reload page": "reload page",
-  "toggle": "toggle"
+  "toggle": "toggle",
+  "passwordEnter": "Enter password",
+  "usernameEnter": "Enter username"
 }

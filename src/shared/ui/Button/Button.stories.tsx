@@ -127,4 +127,15 @@ export const SquareSizeXl: Story = {
 
 SquareSizeXl.decorators = [ThemeDecorator(Theme.DARK)]
 
+
+export const Disabled: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true
+    }
+}
+
+
+
 // BackgroundInverted.decorators = [ThemeDecorator(Theme.LIGHT)]

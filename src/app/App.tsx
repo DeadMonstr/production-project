@@ -1,12 +1,20 @@
-import React, {Suspense} from 'react'
+import React, {Suspense, useEffect} from 'react'
 
 import { classNames } from 'shared/lib/classNames/classNames'
 
 import { AppRouter } from 'app/providers/routers'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
+import {useDispatch} from "react-redux";
+import {userActions} from "entities/User";
 
 function App () {
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(userActions.initAuthData())
+    },[dispatch])
 
     return (
         <div className={classNames('app', {}, [])}>
