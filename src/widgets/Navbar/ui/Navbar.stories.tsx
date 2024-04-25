@@ -22,7 +22,7 @@ export const Light: Story = {
 }
 
 Light.decorators = [
-    StoreDecorator({})
+    StoreDecorator({}, )
 ]
 
 
